@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>选择车型</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no，minimal-ui">
+		<meta name="renderer" content="webkit">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="想吃就吃">
+		<meta name="keywords" content="想吃就吃">
+		<meta name="description" content="想吃就吃">
+		<link rel="stylesheet" type="text/css" href="../css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/want-eat.css" />
+		<script type="application/javascript" src="../js/fastclick.js"></script>
+		<script type="text/javascript" src="../js/adapt-screen.js"></script>
+		<script type="text/javascript">
+			window.addEventListener('load', function() {
+				FastClick.attach(document.body);
+			}, false);
+		</script>
+	</head>
+
+	<body>
+		<div class="che-wrap">
+			<form action="" method="post">
+
+				<div class="che-type">
+					<img src="../images/che.png" /><span>大众-帕萨特</span>
+				</div>
+				<ul class="che-table">
+					<li>
+						<ul class="che-item">
+							<div class="che-head">1.4T</div>
+							<li>
+								<p class="che-p1">2014款 尊荣版 SVW71410PR <span class="che-gou"></span></p>
+								<p class="che-p2">车辆价格：<span class="price">180000.00元</span><span class="float-r clutch">手自一体</span></p>
+							</li>
+							<li>
+								<p class="che-p1">2014款 尊荣版 SVW71410PR <span class="che-gou"></span></p>
+								<p class="che-p2">车辆价格：<span class="price">180000.00元</span><span class="float-r clutch">手动挡</span></p>
+							</li>
+							<li>
+								<p class="che-p1">2014款 尊荣版 SVW71410PR <span class="che-gou"></span></p>
+								<p class="che-p2">车辆价格：<span class="price">180000.00元</span><span class="float-r clutch">手自一体</span></p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="che-item">
+							<div class="che-head">1.8L</div>
+							<li>
+								<p class="che-p1">2000款 Gli舒适型 SVW71410PR <span class="che-gou"></span></p>
+								<p class="che-p2">车辆价格：<span class="price">197000.00元</span><span class="float-r clutch">双离合变速器</span></p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--<input type="submit" value="提交" class="button-btn che-btn-pos" />-->
+				<a href="javascript:;" id="che-tj" class="weui-btn button-btn che-btn-pos">提交</a>
+			</form>
+		</div>
+	</body>
+	<script type="application/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			+ function($) {
+				var cheMsg = {};
+				var slider = $('<img src="../images/gou2.png" />');
+				$(".che-item li").on("click", function() {
+						$(".che-gou").empty();
+						$(".che-p1").removeClass("color-green");
+						$(this).find(".che-gou").append(slider);
+						$(this).find(".che-p1").addClass("color-green");
+						//车辆信息
+						cheMsg = {
+							cheType: $(this).children(".che-p1").text(),
+							chePric: $(this).find(".price").text(),
+							cheClutch: $(this).find(".clutch").text()
+						}
+					})
+					//提交
+				$("#che-tj").on("click", function() {
+					console.log(cheMsg);
+				})
+			}(window.jQuery)
+		})
+	</script>
+
+</html>

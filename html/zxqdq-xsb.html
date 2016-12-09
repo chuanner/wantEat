@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>专享签单权</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no，minimal-ui">
+		<meta name="renderer" content="webkit">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="想吃就吃">
+		<meta name="keywords" content="想吃就吃">
+		<meta name="description" content="想吃就吃">
+		<link rel="stylesheet" type="text/css" href="../css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/want-eat.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mask.css" />
+		<script type="text/javascript" src="../js/adapt-screen.js"></script>
+	</head>
+
+	<body ontouchstart="">
+		<div class="xcjc-wrap">
+			<!--表单-1-->
+			<form id="form-1" action="" method="post">
+				<input id="img-file" class="weui_uploader_input picture1" type="file" accept="image/jpg,image/jpeg,image/png,image/gif">
+				<input id="submit1" type="submit" value="" />
+			</form>
+
+			<!--表单-2-->
+			<form id="form-2" action="" method="post">
+				<div class="realName-carmera" id="picture-box1">
+					<img class="carmera" src="../images/camera.png" />
+					<p class="upload-ben1">上传车辆行驶证正本照片</p>
+					<div id="uploader-box" class="license-box">
+						<p class="sfz-zp">车辆行驶证正本照片</p>
+					</div>
+				</div>
+				<div class="weui-cells weui-cells_form globel-cells_form">
+
+					<div class="weui-cell weui-cell_vcode globel-cells3 globel-ipt-box">
+						<div class="weui-cell__hd">
+							<label class="weui-label globel-label1">车牌号码</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input globel-ipt" type="text" placeholder="填写车牌号码" check-type="normal" check-msg="车牌号码有误">
+						</div>
+						<div class="weui-cell__ft ">
+							<i class="weui-icon-warn globel-icon-warn"></i>
+						</div>
+					</div>
+					<div class="weui-cell weui-cell_vcode globel-cells3 globel-ipt-box">
+						<div class="weui-cell__hd">
+							<label class="weui-label globel-label2">所有人</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input globel-ipt" type="text" placeholder="填写车辆所有人" check-type="name" check-msg="车辆所有人有误">
+						</div>
+						<div class="weui-cell__ft ">
+							<i class="weui-icon-warn globel-icon-warn"></i>
+						</div>
+					</div>
+					<div class="weui-cell weui-cell_vcode globel-cells3 globel-ipt-box">
+						<div class="weui-cell__hd">
+							<label class="weui-label globel-label1">品牌型号</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input globel-ipt" type="text" placeholder="填写品牌型号" check-type="normal" check-msg="品牌型号只填写英文和数字">
+						</div>
+						<div class="weui-cell__ft ">
+							<i class="weui-icon-warn globel-icon-warn"></i>
+						</div>
+					</div>
+					<div class="weui-cell weui-cell_vcode globel-cells3 globel-ipt-box">
+						<div class="weui-cell__hd">
+							<label class="weui-label globel-label1">车辆识别代码</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input globel-ipt" type="text" placeholder="填写车辆识别代码" check-type="normal" check-msg="填写车辆识别代码有误">
+						</div>
+						<div class="weui-cell__ft ">
+							<i class="weui-icon-warn globel-icon-warn"></i>
+						</div>
+					</div>
+					<div class="weui-cell weui-cell_vcode globel-cells3 globel-ipt-box">
+						<div class="weui-cell__hd">
+							<label class="weui-label globel-label1">发动机号</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input globel-ipt" type="text" placeholder="填写发动机号" check-type="normal" check-msg="发动机号有误">
+						</div>
+						<div class="weui-cell__ft ">
+							<i class="weui-icon-warn globel-icon-warn"></i>
+						</div>
+					</div>
+					<div class="weui-cell globel-cells3 globel-ipt-box">
+						<div class="weui-cell__hd"><label for="" class="weui-label globel-label1">注册日期</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input globel-ipt-fb" type="text" onfocus="(this.type='date')" placeholder="选择注册时间" />
+							<img class="left-jian-pos" src="../images/left-jian.png" />
+						</div>
+					</div>
+
+					<div id="uploader-fb" class="license-box">
+						<img class="jiahao2" src="../images/jiahao.png" />
+						<p class="upload-ben2">上传车辆行驶证副本照片</p>
+					</div>
+
+					<input type="submit" value="提交" class="button-btn marg-t-1 marg-b-1" />
+			</form>
+			</div>
+
+			<div class="alert" style="display: none;">
+				<div class="weui-mask"></div>
+				<div class="weui-dialog">
+					<!--<div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div>-->
+					<div class="weui-dialog__bd alert-content">弹窗内容，告知当前页面信息等</div>
+					<div class="weui-dialog__ft">
+						<a href="javascript:;" class="alert-btn weui-dialog__btn weui-dialog__btn_primary color-green">确定</a>
+					</div>
+				</div>
+			</div>
+			<div id="loading" style="display: none;">
+				<div id="loading-center">
+					<div id="loading-center-absolute">
+						<div class="object" id="object_one"></div>
+						<div class="object" id="object_two"></div>
+						<div class="object" id="object_three"></div>
+						<div class="object" id="object_four"></div>
+						<div class="object" id="object_five"></div>
+						<div class="object" id="object_six"></div>
+						<div class="object" id="object_seven"></div>
+						<div class="object" id="object_eight"></div>
+					</div>
+				</div>
+			</div>
+	</body>
+	<script type="application/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="application/javascript" src="../js/checkcard.js"></script>
+	<script type="text/javascript" src="../js/jquery.form.js"></script>
+	<script type="text/javascript" src="../js/want-eat.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			/*=====表单提交=====*/
+			$(".carmera,#uploader-fb").on("click", function() {
+				$("#img-file").trigger("click");
+			})
+			$("#img-file").on("change", function(event) {
+					var myFiles = event.target.files;
+					//console.log(myFiles);
+					//如果没选中图片直接返回，不会上传
+					if(myFiles.length === 0) {
+						return;
+					} else {
+						console.log("已经选中图片");
+						console.log($("#img-file").val());
+						$("#form-1").trigger("submit");
+					}
+				})
+				//异步提交form-1
+			$("#form-1").submit(function() {
+				$("#loading").css({
+					display: "block"
+				})
+				var options = {
+					dateType: 'json',
+					clearForm: true,
+					resetForm: true
+				}
+				$(this).ajaxSubmit(options);
+				return false;
+			})
+		})
+	</script>
+
+</html>
